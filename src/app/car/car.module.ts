@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { CarRoutingModule } from './car-routing.module';
 import { CarComponent } from './components/car/car.component';
 import { CarsComponent } from './components/cars/cars.component';
+import { MaterializeModule } from '../materialize/materialize.module';
 
 @NgModule({
   declarations: [],
@@ -11,7 +12,8 @@ import { CarsComponent } from './components/cars/cars.component';
     CommonModule,
     CarRoutingModule,
     CarComponent,
-    CarsComponent
+    CarsComponent,
+    MaterializeModule
   ]
 })
 export class CarModule { }
