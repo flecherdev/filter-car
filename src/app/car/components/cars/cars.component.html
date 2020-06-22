@@ -1,1 +1,12 @@
-<p>cars works!</p>
+<div>
+    <div>
+
+    </div>
+    <div>
+        <h2>Comprando tu auto oline te lo llevamos a domicilio!</h2>
+        <app-car
+            *ngFor="let car of cars"
+            [car]="car"
+        ></app-car>
+    </div>
+</div>

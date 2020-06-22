@@ -7,12 +7,13 @@ import { CarsComponent } from './components/cars/cars.component';
 import { MaterializeModule } from '../materialize/materialize.module';
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    CarComponent,
+    CarsComponent,
+  ],
   imports: [
     CommonModule,
     CarRoutingModule,
-    CarComponent,
-    CarsComponent,
     MaterializeModule
   ]
 })

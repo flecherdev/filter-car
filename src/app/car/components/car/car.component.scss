@@ -1,0 +1,70 @@
+mat-card {
+    margin: 1px;
+    border-radius: 5px;
+}
+
+.container {
+    display: grid; /* determina que el contenedor sera una grilla*/
+    grid-template-columns: repeat(3,1fr);  /* divide en 3 columnas los elementos */
+    grid-gap: 1px; /* espacios  filas y colunas */
+    height: 243px;
+}   
+
+.item {
+    display: grid; /* determina que el contenedor sera una grilla*/
+    grid-template-columns: repeat(2,1fr); 
+    padding: 0px;
+    margin: 2px;
+}
+
+.item:nth-of-type(1) { /* toma el elemento 4 */
+    grid-column-start: 1; 
+    grid-column-end: 3;
+}
+
+.font-min {
+    font-size: 12px;
+}
+
+.font-max {
+    font-size: 18px;
+}
+
+.font-presio {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.car-img {
+    margin: 0px;
+}
+
+.car-img img{
+    float: left;
+    height: 237px;
+    width: 379px;
+}
+
+.describe-car {
+    float: flex;
+}
+
+.info {
+    display: grid;
+    grid-template: 43px 43px 43px 43px / 350px
+}
+
+.score{
+    // bottom: 5px;
+    // right: 5px;
+}
+
+.presio {
+    display: grid;
+    height: 100%;
+    margin: 5PX;
+    text-align: center;
+    grid-template: 63px 106px 63px / 400px
+}
+
+
