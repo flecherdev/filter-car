@@ -1,0 +1,10 @@
+{
+  "/api/*": {
+    "target": "https://c1800387.ferozo.com",
+    "secure": true,
+    "pathRewrite": {
+    "^/posts": ""
+  },
+    "changeOrigin": true
+  }
+}
