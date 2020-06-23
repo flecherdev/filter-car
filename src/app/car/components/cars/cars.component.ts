@@ -102,10 +102,8 @@ export class CarsComponent implements OnInit {
         default:
           break;
       }
-    }, 1000);
-    
-    
-    
+    }, 500);
+
   }
 
 }
