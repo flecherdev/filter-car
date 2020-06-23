@@ -14,6 +14,8 @@ Angular: 8.2.11
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
+web online:
+https://fir-crud-b03d8.web.app
 
 informacion para el proxy
 https://medium.com/javascript-comunidad/configurar-proxy-en-angular-cli-25f07237d13e
