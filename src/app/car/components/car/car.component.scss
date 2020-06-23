@@ -5,7 +5,8 @@ mat-card {
 
 .container {
     display: grid; /* determina que el contenedor sera una grilla*/
-    grid-template-columns: repeat(3,1fr);  /* divide en 3 columnas los elementos */
+    // grid-template-columns: repeat(3,1fr);  /* divide en 3 columnas los elementos */
+    grid-template-columns: 150px 1fr 250px;
     grid-gap: 1px; /* espacios  filas y colunas */
     height: 243px;
 }   
@@ -69,7 +70,7 @@ img {
 
 .info {
     display: grid;
-    grid-template: 43px 43px 43px 43px / 350px
+    grid-template: 43px 43px 43px 43px / 370px
 }
 
 .score{
@@ -82,7 +83,7 @@ img {
     height: 100%;
     margin: 5PX;
     text-align: center;
-    grid-template: 63px 106px 63px / 400px
+    grid-template: 63px 106px 63px / 240px
 }
 
 

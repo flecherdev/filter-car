@@ -8,6 +8,7 @@ import { MatChipsModule } from '@angular/material/chips';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatListModule } from '@angular/material/list';
+import { MatDividerModule } from '@angular/material/divider';
 
 @NgModule({
   declarations: [],
@@ -19,7 +20,8 @@ import { MatListModule } from '@angular/material/list';
     MatChipsModule,
     MatFormFieldModule,
     MatCheckboxModule,
-    MatListModule
+    MatListModule,
+    MatDividerModule
   ],
   exports: [
     MatCardModule,
@@ -27,7 +29,8 @@ import { MatListModule } from '@angular/material/list';
     MatExpansionModule,
     MatChipsModule,
     MatCheckboxModule,
-    MatListModule
+    MatListModule,
+    MatDividerModule
   ]
 })
 export class MaterializeModule { }

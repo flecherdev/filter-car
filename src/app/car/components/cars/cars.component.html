@@ -1,5 +1,10 @@
 <div class="container">
     <div class="item">
+        <mat-list>
+            <mat-list-item><h3 class="mg-5">Filtro</h3></mat-list-item>
+            <mat-divider></mat-divider>
+        </mat-list>
+        
         <mat-accordion>
             <mat-expansion-panel>
               <mat-expansion-panel-header>
@@ -12,10 +17,10 @@
           
               <mat-list role="list">
                 <mat-list-item role="listitem">
-                    <mat-checkbox>OKM</mat-checkbox>
+                    <mat-checkbox [(ngModel)]="ok" (click)="fillCars('ok')">OKM </mat-checkbox>
                 </mat-list-item>
                 <mat-list-item role="listitem">
-                    <mat-checkbox>USADOS</mat-checkbox>
+                    <mat-checkbox [(ngModel)]="usado" (click)="fillCars('usado')">USADOS </mat-checkbox>
                 </mat-list-item>
             </mat-list>
               
@@ -31,15 +36,12 @@
               
               <mat-list role="list">
                 <mat-list-item role="listitem">
-                    <mat-checkbox>Automatico</mat-checkbox>
+                    <mat-checkbox [(ngModel)]="automatico" (click)="fillCars('automatico')">Automatico</mat-checkbox>
                 </mat-list-item>
                 <mat-list-item role="listitem">
-                    <mat-checkbox>Manual</mat-checkbox>
+                    <mat-checkbox [(ngModel)]="manual" (click)="fillCars('manual')">Manual</mat-checkbox>
                 </mat-list-item>
             </mat-list>
-
-              
-              
 
             </mat-expansion-panel>
           </mat-accordion>

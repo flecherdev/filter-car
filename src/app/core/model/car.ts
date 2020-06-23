@@ -8,4 +8,5 @@ export interface Car {
     moneda?: string;
     score?: string;
     caracteristica?: string;
+    transmision?: string;
 }

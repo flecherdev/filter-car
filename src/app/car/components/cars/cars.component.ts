@@ -14,6 +14,11 @@ export class CarsComponent implements OnInit {
   cars: Car[] = [];
   data: Doc;
 
+  ok: boolean = false;
+  usado: boolean = false;
+  automatico: boolean = false;
+  manual: boolean = false;
+
   constructor(
     private carsService: CarsService
   ) { }
@@ -22,18 +27,18 @@ export class CarsComponent implements OnInit {
     this.fetchAll();
   }
 
-  fetchAll() {
-    this.carsService.getAllDoc().subscribe( (doc: [] ) => {
-      this.fechDataCar(doc);
+  async fetchAll() {
+    this.carsService.getAllDoc().subscribe((doc: []) => {
+      //console.log(doc);
+      this.cars = this.fechDataCar(doc);
     });
   }
 
   fechDataCar(data: []) {
-
+    const cars: Car[] = [];
     data['docs'].map( myCar => {
       let car: Car = {};
-
-      console.log(myCar['caracteristicas'][5] );
+      // console.log(myCar['caracteristicas'][5] );
 
       car.title = myCar['titulo'];
       car.banner = myCar['banner'];
@@ -44,10 +49,63 @@ export class CarsComponent implements OnInit {
       car.precioOnline = myCar['precioonline'];
       car.score = myCar['scoring'];
       car.year = myCar['year'];
-      
-      this.cars.push(car);
+      car.transmision = myCar['caracteristicas'][3]['valor'];
+      cars.push(car);
     });
+     console.log(cars);
+    return cars;
+  }
 
+  fillCars(find: string) {
+    this.fetchAll();
+    setTimeout(() => {
+      const carsTemp: Car[] = [];
+
+      switch (find) {
+        case 'ok':
+          this.usado = false;
+          this.cars.map( car => {
+            if (car.banner === '0KM') {
+              carsTemp.push(car);
+            }
+          });
+          this.cars = carsTemp;
+          break;
+        case 'usado':
+          this.ok = false;
+          this.cars.map( car => {
+            if (car.banner !== '0KM') {
+              carsTemp.push(car);
+            }
+          });
+          this.cars = carsTemp;
+          break;
+        case 'automatico':
+          this.manual = false;
+          this.cars.map( car => {
+            if (car.transmision !== 'Automática') {
+              carsTemp.push(car);
+            }
+          });
+          this.cars = carsTemp;
+          break;
+        case 'manual':
+          this.automatico = false;
+          this.cars.map( car => {
+            if (car.transmision !== 'Manual') {
+              carsTemp.push(car);
+            }
+          });
+          this.cars = carsTemp;
+          break;
+
+        default:
+          break;
+      }
+    }, 1000);
+    
+    
+    
   }
 
 }
