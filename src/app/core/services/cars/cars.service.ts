@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { tap, map, catchError } from 'rxjs/operators';
 import { environment } from '../../../../environments/environment';
+
 
 @Injectable({
   providedIn: 'root'
@@ -12,8 +13,9 @@ export class CarsService {
     private http: HttpClient
   ) { }
 
-  getAllDoc() { 
-    this.http.get<any[]>(`${environment}`);
+
+  getAllDoc() {
+    return this.http.get("./assets/mock/data.json");
   }
 
 
