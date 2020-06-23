@@ -1,8 +1,50 @@
-<div>
-    <div>
+<div class="container">
+    <div class="item">
+        <mat-accordion>
+            <mat-expansion-panel>
+              <mat-expansion-panel-header>
 
+                <mat-panel-title>
+                  OKM - Usados
+                </mat-panel-title>
+                
+              </mat-expansion-panel-header>
+          
+              <mat-list role="list">
+                <mat-list-item role="listitem">
+                    <mat-checkbox>OKM</mat-checkbox>
+                </mat-list-item>
+                <mat-list-item role="listitem">
+                    <mat-checkbox>USADOS</mat-checkbox>
+                </mat-list-item>
+            </mat-list>
+              
+
+            </mat-expansion-panel>
+            <mat-expansion-panel (opened)="panelOpenState = true"
+                                 (closed)="panelOpenState = false">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  Trasmision
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              
+              <mat-list role="list">
+                <mat-list-item role="listitem">
+                    <mat-checkbox>Automatico</mat-checkbox>
+                </mat-list-item>
+                <mat-list-item role="listitem">
+                    <mat-checkbox>Manual</mat-checkbox>
+                </mat-list-item>
+            </mat-list>
+
+              
+              
+
+            </mat-expansion-panel>
+          </mat-accordion>
     </div>
-    <div>
+    <div class="item">
         <h2>Comprando tu auto oline te lo llevamos a domicilio!</h2>
         <app-car
             *ngFor="let car of cars"

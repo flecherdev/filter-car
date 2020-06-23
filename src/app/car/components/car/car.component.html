@@ -8,14 +8,14 @@
                 <h3>{{ car.title }}</h3> 
                 <mat-chip-list aria-label="Fish selection">
                     {{ car.year }}
-                    <mat-chip>{{ car.banner }}</mat-chip>  
+                    <mat-chip *ngIf="car.banner">{{ car.banner }}</mat-chip>  
                 </mat-chip-list>
-                <div>
+                <div *ngIf=" car.caracteristica">
                     Caracteristica: {{ car.caracteristica }} 
                 </div>
              </div>
 
-             <mat-chip-list class="score" aria-label="Fish selection">
+             <mat-chip-list *ngIf="car.score" class="score" aria-label="Fish selection">
                 <mat-chip color="primary" selected>{{ car.score }}</mat-chip>
                 MUY BUENO 
             </mat-chip-list>
